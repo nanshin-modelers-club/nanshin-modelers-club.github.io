@@ -267,7 +267,7 @@
     }
     .gallery figure { margin:0; }
     .gallery .photo {
-      aspect-ratio:4/3; border-radius:16px; overflow:hidden;
+      aspect-ratio:1/1; border-radius:16px; overflow:hidden;
       background:linear-gradient(135deg,#222,#555);
       position:relative;
     }
@@ -276,7 +276,8 @@
       display:grid; place-items:center; color:#fff; font-weight:800;
       background:linear-gradient(transparent,rgba(0,0,0,.48));
     }
-    .gallery .photo img { width:100%; height:100%; object-fit:cover; display:block; }
+    .gallery .photo.has-img::after { display:none; }
+    .gallery .photo img { width:100%; height:100%; object-fit:cover; object-position:50% 55%; display:block; }
     .gallery figcaption { padding:10px 4px 0; line-height:1.5; }
     .gallery .cap-name { display:block; font-weight:800; font-size:.98rem; }
     .gallery .cap-work { display:block; color:var(--muted); font-size:.85rem; }
@@ -443,8 +444,8 @@
     </div>
     <div class="gallery">
       <figure>
-        <div class="photo"></div>
-        <figcaption><span class="cap-name">山田 太郎さん</span><span class="cap-work">1/35 陸上自衛隊 10式戦車</span></figcaption>
+        <div class="photo has-img"><img src="images/01.jpg" alt="出口タカヒロの作品" loading="lazy"></div>
+        <figcaption><span class="cap-name">出口タカヒロ</span></figcaption>
       </figure>
       <figure>
         <div class="photo"></div>
