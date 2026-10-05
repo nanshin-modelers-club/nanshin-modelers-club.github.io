@@ -281,6 +281,31 @@
     .gallery figcaption { padding:10px 4px 0; line-height:1.5; }
     .gallery .cap-name { display:block; font-weight:800; font-size:.98rem; }
     .gallery .cap-work { display:block; color:var(--muted); font-size:.85rem; }
+
+    /* 活動の様子（サムネイル） */
+    .scenes { margin-top:34px; }
+    .scenes-head { display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:14px; }
+    .scenes-head h3 { margin:0; font-size:1.25rem; letter-spacing:-.02em; }
+    .scenes-head p { margin:0; color:var(--muted); font-size:.9rem; }
+    .scene-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .scene { margin:0; }
+    .scene .thumb {
+      position:relative; aspect-ratio:4/3; border-radius:14px; overflow:hidden;
+      background:linear-gradient(135deg,#22262c,#4a5058);
+    }
+    .scene .thumb::after {
+      content:"写真準備中"; position:absolute; inset:0;
+      display:grid; place-items:center; color:rgba(255,255,255,.85); font-weight:700; font-size:.85rem;
+    }
+    .scene .thumb.has-img::after { display:none; }
+    .scene .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+    .scene .tag {
+      position:absolute; left:10px; bottom:10px; z-index:1;
+      background:var(--red); color:#fff; font-size:.74rem; font-weight:800;
+      padding:3px 9px; border-radius:999px; letter-spacing:.04em;
+    }
+    .scene .tag.alt { background:#111318; }
+    @media (max-width:800px) { .scene-grid { grid-template-columns:1fr 1fr; } }
     .news-link {
       display:flex; align-items:center; justify-content:space-between; gap:20px;
       background:#111318; color:#fff; padding:24px 26px; border-radius:18px;
@@ -427,6 +452,20 @@
           referrerpolicy="no-referrer-when-downgrade"
           title="飯田市 鼎公民館・鼎文化センター 地図">
         </iframe>
+      </div>
+    </div>
+
+    <!-- 活動の様子（サムネイル） -->
+    <div class="scenes">
+      <div class="scenes-head">
+        <h3>活動の様子</h3>
+        <p>定例会や展示会の雰囲気です。</p>
+      </div>
+      <div class="scene-grid">
+        <figure class="scene"><div class="thumb"><span class="tag">定例会</span></div></figure>
+        <figure class="scene"><div class="thumb"><span class="tag">定例会</span></div></figure>
+        <figure class="scene"><div class="thumb"><span class="tag alt">展示会</span></div></figure>
+        <figure class="scene"><div class="thumb"><span class="tag alt">展示会</span></div></figure>
       </div>
     </div>
   </div>
