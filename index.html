@@ -306,6 +306,28 @@
     }
     .scene .tag.alt { background:#111318; }
     @media (max-width:800px) { .scene-grid { grid-template-columns:1fr 1fr; } }
+
+    /* 展示会の実績 */
+    .history {
+      margin-top:26px; background:#fff; border:1px solid var(--line); border-radius:18px;
+      padding:26px 28px 10px; box-shadow:0 7px 24px rgba(16,18,22,.045);
+    }
+    .history h3 { margin:0; font-size:1.25rem; letter-spacing:-.02em; }
+    .history .lead-s { margin:6px 0 0; color:var(--muted); font-size:.92rem; }
+    .history ol { list-style:none; margin:18px 0 0; padding:0; }
+    .history li {
+      display:grid; grid-template-columns:170px 1fr; gap:22px;
+      padding:18px 0; border-top:1px solid var(--line);
+    }
+    .history .yr { font-weight:900; font-size:1.7rem; line-height:1.1; letter-spacing:-.03em; color:var(--red); }
+    .history .no { display:block; margin-top:4px; font-size:.82rem; font-weight:800; letter-spacing:.04em; color:var(--muted); }
+    .history .when { font-weight:800; }
+    .history .where { margin-top:2px; color:#374151; }
+    .history .detail { margin-top:6px; color:var(--muted); font-size:.92rem; }
+    @media (max-width:800px) {
+      .history { padding:22px 20px 6px; }
+      .history li { grid-template-columns:1fr; gap:8px; }
+    }
     .news-link {
       display:flex; align-items:center; justify-content:space-between; gap:20px;
       background:#111318; color:#fff; padding:24px 26px; border-radius:18px;
@@ -413,6 +435,36 @@
         <h3>展示会への参加</h3>
         <p>地域の文化祭や模型展示会へ合同出展することもあります（出展時のみ実費を参加者で精算します）。</p>
       </div>
+    </div>
+
+    <!-- 展示会の実績 -->
+    <div class="history">
+      <h3>展示会の実績</h3>
+      <p class="lead-s">2024年から毎年、秋に作品展示会を開催しています。</p>
+      <ol>
+        <li>
+          <div><span class="yr">2026</span><span class="no">第3回</span></div>
+          <div>
+            <div class="when">2026年9月19日（土） 10:30〜15:30</div>
+            <div class="where">飯田文化会館</div>
+          </div>
+        </li>
+        <li>
+          <div><span class="yr">2025</span><span class="no">第2回</span></div>
+          <div>
+            <div class="when">2025年9月6日（土） 10:30〜15:30</div>
+            <div class="where">飯田文化会館 会議室</div>
+            <div class="detail">ガンプラ、キャラクター、車や飛行機などの模型約100点を展示（入場無料）</div>
+          </div>
+        </li>
+        <li>
+          <div><span class="yr">2024</span><span class="no">第1回（模擬展示会）</span></div>
+          <div>
+            <div class="when">2024年9月15日（日） 10:00〜16:00</div>
+            <div class="where">丘の上結いスクエア 2階 多目的ホール</div>
+          </div>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
