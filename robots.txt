@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nanshin-modelers-club.github.io/sitemap.xml
